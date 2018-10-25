@@ -43,19 +43,17 @@ public class MainController {
     private static final Logger logger = LoggerFactory.getLogger(MainController.class);	 
     
     //public OutboundResponse ping(@RequestHeader(value="User-Agent") String userAgent, @RequestParam(value = "ID", defaultValue = "") String id, @RequestBody InboundRequest pinger)
-    @RequestMapping(value = "/zing", method= RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE ,produces = MediaType.APPLICATION_JSON_VALUE)  
+    /*@RequestMapping(value = "/zing", method= RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE ,produces = MediaType.APPLICATION_JSON_VALUE)  
     public OutboundResponse zing(@RequestParam String token, @RequestHeader(value="Origin") String origin, @RequestBody InboundRequest pinger) {
      logger.info("--zing--");
     return new OutboundResponse(token+": Springboot is up "+pinger.getInbound()+" from "+origin);
     }
+    */
     
     @RequestMapping(value = "/ping", method= RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)  
     public OutboundResponse ping() {
-     logger.info("--ping--");
     Random random = new Random();
-
-    
-    return new OutboundResponse(String.valueOf(random.nextInt(100)));
+    return new OutboundResponse(String.valueOf(random.nextInt(1000)));
     }   
     
     @RequestMapping(value = "/getToken", method= RequestMethod.POST)  

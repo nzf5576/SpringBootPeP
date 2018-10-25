@@ -25,6 +25,7 @@ public class Start implements WebServerFactoryCustomizer<TomcatServletWebServerF
     public void init(){
         System.out.println("-------------------> Initializing Services");
         System.out.println(Start.class.getClassLoader().getResource("logging.properties"));
+        System.out.println(System.getProperty("java.io.tmpdir"));
         
     }
     
