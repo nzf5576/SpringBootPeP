@@ -29,13 +29,13 @@ public class PersonService {
         return "You saved it!";
     }
     
-    public String OnboardPerson(String name, String email) {
+    public boolean OnboardPerson(Person person) {
 		Person n = new Person();
-		n.setFirstName(name);
-		n.setEmail(email);
+		n.setFirstName(person.getFirstName());
+		n.setEmail(person.getEmail());
 		personRepository.save(n);
 		logger.debug("--saving person in person service--");
-		return "Success.";
+		return true;
     }
     
 	public Person getThisUser(Integer token) {               

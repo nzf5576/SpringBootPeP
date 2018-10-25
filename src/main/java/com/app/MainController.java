@@ -59,22 +59,22 @@ public class MainController {
     }   
     
     @RequestMapping(value = "/getToken", method= RequestMethod.POST)  
-	public String getToken (@RequestParam String acct, @RequestParam String routingno) {
+	public OutboundResponse getToken (@RequestParam String acct, @RequestParam String routingno) {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
          logger.debug("--getting token--");
             
-		return securityService.getToken(acct, routingno);
+	return new OutboundResponse(securityService.getToken(acct, routingno));
 	}
 
 
     @RequestMapping(value = "/add", method= RequestMethod.POST)  
-	public String addNewPerson (@RequestParam String name, @RequestParam String email) {
+	public OutboundResponse addNewPerson (@RequestBody Person person) {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
          logger.debug("--Adding person--");
             
-		return personService.OnboardPerson(name, email);
+	return new OutboundResponse(String.valueOf(personService.OnboardPerson(person)));
 	}
         
   

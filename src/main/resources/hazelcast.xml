@@ -3,7 +3,7 @@
         xsi:schemaLocation="http://www.hazelcast.com/schema/config http://www.hazelcast.com/schema/config/hazelcast-config.xsd"
         xmlns="http://www.hazelcast.com/schema/config"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <management-center enabled="true">http://192.168.0.37:8080/hazelcast-mancenter</management-center>
+    <management-center enabled="false">http://192.168.0.37:8080/hazelcast-mancenter</management-center>
 
   <network>
     <join>
