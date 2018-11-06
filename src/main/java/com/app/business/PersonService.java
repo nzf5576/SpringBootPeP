@@ -33,6 +33,11 @@ public class PersonService {
 		Person n = new Person();
 		n.setFirstName(person.getFirstName());
 		n.setEmail(person.getEmail());
+                n.setAccountNumber(person.getAccountNumber());
+                n.setLastName(person.getLastName());
+                n.setLoginID(person.getLoginID());
+                n.setPhone(person.getPhone());
+                n.setRoutingNumber(person.getRoutingNumber());
 		personRepository.save(n);
 		logger.debug("--saving person in person service--");
 		return true;
