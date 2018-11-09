@@ -10,7 +10,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.4.RELEASE</version>
+        <version>2.1.0.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -24,7 +24,7 @@
             <scope>test</scope>
 	</dependency>
 
-        <!-- Drools -->        
+        <!-- Drools         
         <dependency>
             <groupId>org.drools</groupId>
             <artifactId>drools-core</artifactId>
@@ -40,6 +40,7 @@
             <artifactId>drools-compiler</artifactId>
             <version>7.0.0.Final</version>
         </dependency>
+        -->
         <!-- JPA Data (We are going to use Repositories, Entities, Hibernate, etc...) -->
 
         <dependency>
